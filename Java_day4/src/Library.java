@@ -16,7 +16,7 @@ public class Library {
                 return;
             }
         }
-        System.out.println("Library is full");
+        System.out.println("Library is full.");
         
     }
     public void addUser(User u1){
