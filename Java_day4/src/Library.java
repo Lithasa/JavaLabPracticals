@@ -30,7 +30,23 @@ public class Library {
         
     }
 
-    
+    public void borrowBook(Book b1, User u1){
+        if(b1 != null && u1 != null){
+            int updateStock = b1.getStockQuantity() -1;
+            if(updateStock >= 0 ){
+                b1.setStockQuantity(updateStock);
+                u1.setBorrowedBooksCount(u1.getBorrowedBooksCount()+1);
+                System.out.println(u1.getName() + " borrowed " + b1.getTitle())
+                        
+            } 
+            else{
+                System.out.println("Insufficient stock");
+            }
+            
+        }
+    }
+
+
     
     
     
