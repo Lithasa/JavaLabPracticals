@@ -1,8 +1,9 @@
 
-public class Library {
-    
-    private  Book[] books;
-    private  User[] users;
+static class Library {
+    private Book[] books;
+    private User[] users;
+    private int bookIndex;
+    private int userIndex;
     
     public Library(){
         books = new Book[20];
