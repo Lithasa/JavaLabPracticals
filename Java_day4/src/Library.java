@@ -13,27 +13,14 @@ public class Library {
     }
 
     
-    public void addBook(Book b1){
-        for(int i = 0; i< books.length; i++){
-            if(books[i]== null){
-                books[i] = b1;
-                return;
-            }
+    public void addBook(Book b1) {
+        if (bookIndex < books.length) {
+            books[bookIndex++] = b1;
+            System.out.println("Book added: " + b1);
+        } else {
+            System.out.println("Library book storage is full.");
         }
-        System.out.println("Library is full.");
-        
     }
-    public void addUser(User u1){
-        for(int i = 0; i< users.length; i++){
-            if(users[i]== null){
-                users[i] = u1;
-                return;
-            }
-        }
-        System.out.println("Library is full");
-        
-    }
-
     public void borrowBook(Book b1, User u1){
         if(b1 != null && u1 != null){
             int updateStock = b1.getStockQuantity() -1;
