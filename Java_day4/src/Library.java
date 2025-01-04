@@ -1,14 +1,17 @@
 
-static class Library {
+public class Library {
     private Book[] books;
     private User[] users;
     private int bookIndex;
     private int userIndex;
-    
-    public Library(){
-        books = new Book[20];
-        users = new User[20];
+
+    public Library(int maxBooks, int maxUsers) {
+        books = new Book[maxBooks];
+        users = new User[maxUsers];
+        bookIndex = 0;
+        userIndex = 0;
     }
+
     
     public void addBook(Book b1){
         for(int i = 0; i< books.length; i++){
