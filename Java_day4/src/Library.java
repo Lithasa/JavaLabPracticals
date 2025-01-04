@@ -21,6 +21,15 @@ public class Library {
             System.out.println("Library book storage is full.");
         }
     }
+
+    public void addUser(User u1) {
+        if (userIndex < users.length) {
+            users[userIndex++] = u1;
+            System.out.println("User registered: " + u1);
+        } else {
+            System.out.println("Library user storage is full.");
+        }
+    }
     public void borrowBook(Book b1, User u1){
         if(b1 != null && u1 != null){
             int updateStock = b1.getStockQuantity() -1;
