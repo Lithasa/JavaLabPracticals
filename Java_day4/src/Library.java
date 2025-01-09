@@ -49,19 +49,25 @@ public class Library {
         return null;
     }
 
-    public void borrowBook(Book b1, User u1){
-        if(b1 != null && u1 != null){
-            int updateStock = b1.getStockQuantity() -1;
-            if(updateStock >= 0 ){
-                b1.setStockQuantity(updateStock);
-                u1.setBorrowedBooksCount(u1.getBorrowedBooksCount()+1);
-                System.out.println(u1.getName() + " borrowed " + b1.getTitle())
-                        
-            } 
-            else{
-                System.out.println("Insufficient stock");
-            }
-            
+    public void borrowBook(int bookId, int userId) {
+        Book book = findBook(bookId);
+        User user = findUser(userId);
+
+        if (book == null) {
+            System.out.println("Book not found.");
+            return;
+        }
+        if (user == null) {
+            System.out.println("User not found.");
+            return;
+        }
+
+        if (book.getStockQuantity() > 0 && user.getBorrowedBooksCount() < 5) {
+            book.setStockQuantity(book.getStockQuantity() - 1);
+            user.setBorrowedBooksCount(user.getBorrowedBooksCount() + 1);
+            System.out.println(user.getName() + " borrowed " + book.getTitle());
+        } else {
+            System.out.println("Borrowing the book failed: either stock is empty or user has reached borrowing limit.");
         }
     }
 
