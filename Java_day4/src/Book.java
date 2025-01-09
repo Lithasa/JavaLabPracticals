@@ -1,12 +1,52 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 
-/**
- *
- * @author Lithasa Jayamaha
- */
 public class Book {
+    private int bookId;
+    private String title;
+    private String author;
+    private int price;
+    private int stockQuantity;
+    static int bookCount;
+    
+    Book(int bookId,String title, String author,int price,int stockQuantity){
+        this.bookId = bookId;
+        this.title = title;
+        this.author = author;
+        this.price = price;
+        this.stockQuantity = stockQuantity;
+        bookCount++;
+    }
+    
+    public int getBookId(){
+        return bookId;   
+}
+    public void setBookId(int bookId){
+        this.bookId = bookId;
+    }
+    public String getTitle(){
+        return title;
+    }
+    public void setTitle(){
+        this.title = title;
+    }
+    public String getAuthor(){
+        return author;
+    }
+    public void setAuthor(){
+        this.author = author;
+    }
+    public int getPrice(){
+        return price;
+    }
+    public void setPrice(){
+        this.price = price;
+    }
+    public int getStockQuantity(){
+        return stockQuantity;
+    }
+    public void setStockQuantity(int stockQuantity){
+        this.stockQuantity = stockQuantity;
+    }
+    
+            
     
 }
