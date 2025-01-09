@@ -93,6 +93,14 @@ public class Library {
         }
     }
 
+    public void displayBooks() {
+        System.out.println("Books in the Library System:");
+        for (int i = 0; i < bookIndex; i++) {
+            Book book = books[i];
+            System.out.println("ID: " + book.getBookId() + ", Title: " + book.getTitle() + ", Author: " + book.getAuthor() + ", Price: " + book.getPrice() + ", Stock: " + book.getStockQuantity());
+        }
+    }
+
 
 
     
