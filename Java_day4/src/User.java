@@ -5,16 +5,13 @@ public class User {
     private int borrowedBooksCount = 0; 
     static int bookCount;
 
-User(int userId, String name, int borrowedBooksCount){
+User(int userId, String name){
     this.userId = userId;
     this.name = name;
     this.borrowedBooksCount = borrowedBooksCount;
     bookCount++;
 }
 
-    User(int i, String u2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 public int getUserId(){
     return userId;
