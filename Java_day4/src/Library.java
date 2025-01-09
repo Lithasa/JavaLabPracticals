@@ -30,6 +30,16 @@ public class Library {
             System.out.println("Library user storage is full.");
         }
     }
+
+    private Book findBook(int bookId) {
+        for (int i = 0; i < bookIndex; i++) {
+            if (books[i].getBookId() == bookId) {
+                return books[i];
+            }
+        }
+        return null;
+    }
+    
     public void borrowBook(Book b1, User u1){
         if(b1 != null && u1 != null){
             int updateStock = b1.getStockQuantity() -1;
