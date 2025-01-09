@@ -107,12 +107,6 @@ public class Library {
             User user = users[i];
             System.out.println("ID: " + user.getUserId() + ", Name: " + user.getName() + ", Borrowed Books Count: " + user.getBorrowedBooksCount());
         }
-    }
-
-
-
-    
-    
     
     
     
