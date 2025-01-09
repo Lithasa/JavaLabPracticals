@@ -71,6 +71,29 @@ public class Library {
         }
     }
 
+    public void returnBook(int bookId, int userId) {
+        Book book = findBook(bookId);
+        User user = findUser(userId);
+
+        if (book == null) {
+            System.out.println("Book not found.");
+            return;
+        }
+        if (user == null) {
+            System.out.println("User not found.");
+            return;
+        }
+
+        if (user.getBorrowedBooksCount() > 0) {
+            book.setStockQuantity(book.getStockQuantity() + 1);
+            user.setBorrowedBooksCount(user.getBorrowedBooksCount() - 1);
+            System.out.println(user.getName() + " returned " + book.getTitle());
+        } else {
+            System.out.println("Returning the book failed: user has not borrowed any books.");
+        }
+    }
+
+
 
     
     
