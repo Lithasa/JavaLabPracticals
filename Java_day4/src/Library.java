@@ -101,6 +101,14 @@ public class Library {
         }
     }
 
+    public void displayUsers() {
+        System.out.println("Users in the Library System:");
+        for (int i = 0; i < userIndex; i++) {
+            User user = users[i];
+            System.out.println("ID: " + user.getUserId() + ", Name: " + user.getName() + ", Borrowed Books Count: " + user.getBorrowedBooksCount());
+        }
+    }
+
 
 
     
