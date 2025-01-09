@@ -39,7 +39,16 @@ public class Library {
         }
         return null;
     }
-    
+
+    private User findUser(int userId) {
+        for (int i = 0; i < userIndex; i++) {
+            if (users[i].getUserId() == userId) {
+                return users[i];
+            }
+        }
+        return null;
+    }
+
     public void borrowBook(Book b1, User u1){
         if(b1 != null && u1 != null){
             int updateStock = b1.getStockQuantity() -1;
