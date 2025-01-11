@@ -46,7 +46,4 @@ public class Book {
     public void setStockQuantity(int stockQuantity){
         this.stockQuantity = stockQuantity;
     }
-    
-            
-    
 }
