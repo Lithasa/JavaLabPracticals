@@ -11,9 +11,7 @@ public User(int userId, String name, int borrowedBooksCount){
     this.borrowedBooksCount = borrowedBooksCount;
     bookCount++;
 }
-
-    
-
+ 
 public int getUserId(){
     return userId;
 }
