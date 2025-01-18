@@ -12,7 +12,7 @@ public class Main {
         acc2.depositFunds(2500);
         acc2.getBalance();
         acc2.setInterestRate(20);
-        acc2.getInterestRate();
+        acc2.monthlyUpdate();
 
 
     }
